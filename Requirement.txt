@@ -1,4 +1,5 @@
 condition: firstly run 'login.py' then signup and then use username and password to login in
+make sure you also downloand all dnn_model folder and save all file inside same folder name it is required for object detection 
 make sure haarcascade file is available in same folder where all major file all stored it used in detect button 
 use pip install in command prompt to install these:
 1)opencv
