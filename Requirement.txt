@@ -1,0 +1,7 @@
+condition: firstly run 'login.py' then signup and then use username and password to login in
+make sure haarcascade file is available in same folder where all major file all stored it used in detect button 
+use pip install in command prompt to install these:
+1)opencv
+2)numpy
+3)scikit
+
