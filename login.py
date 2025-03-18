@@ -14,7 +14,7 @@ win.resizable(False, False)
 def login():
     user = text.get()
     passwor = text2.get()
-    conn = pymysql.connect(host='localhost', user='root', password='', db='')
+    conn = pymysql.connect(host='localhost', user='', password='', db='')
     a = conn.cursor()
     a.execute("SELECT * FROM fun WHERE Username=%s AND Password=%s", (user, passwor))
     result = a.fetchall()
@@ -42,7 +42,7 @@ def forgot():
         new = var2.get()
         old = var3.get()
         if new == old:
-            conn = pymysql.connect(host='localhost', user='root', password='', db='')
+            conn = pymysql.connect(host='localhost', user='', password='', db='')
             mydb = conn.cursor()
             # First, check if the DOB matches for the given username
             mydb.execute("SELECT dob FROM fun WHERE Username=%s", (name,))
@@ -93,7 +93,7 @@ def sign():
         password = tx3.get()
         dob = tx4.get()  # New: DOB value from the entry
         try:
-            conn = pymysql.connect(host='localhost', user='root', password='', db='')
+            conn = pymysql.connect(host='localhost', user='', password='', db='')
             mydb = conn.cursor()
             mydb.execute("SELECT * FROM fun WHERE Username=%s", (username,))
             if mydb.fetchone():
@@ -137,7 +137,7 @@ def remove():
     def remove_user():
         username = rem_user.get()
         password = rem_pass.get()
-        conn = pymysql.connect(host='localhost', user='root', password='', db='')
+        conn = pymysql.connect(host='localhost', user='', password='', db='')
         mydb = conn.cursor()
         # Check if credentials are correct
         mydb.execute("SELECT * FROM fun WHERE Username=%s AND Password=%s", (username, password))
